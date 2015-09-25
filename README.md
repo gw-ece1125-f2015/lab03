@@ -53,3 +53,16 @@ c is a 3 by 4:
   113    75   131   146 
    87    76   137   161 
 ```
+
+### Performance Analysis
+
+When you finish implementing your code, you will measure it's performance with different input sizes. Measuring time in a Linux system is fairly easy.
+
+```
+> time ./matrix 200 200 200 0
+real    0m0.078s
+user    0m0.072s
+sys     0m0.004s
+```
+
+Just take a note of real time and create a table for different sizes of square matrices. Plot your results, and create a short(1-2 pages) report, discussing the results. And submit the report(pdf file, please) in the same tarball as your assignment.
