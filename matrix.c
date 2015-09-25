@@ -163,11 +163,6 @@ int main(int argc, char *argv[])
 		if (matrix_from_file(&b, argv[2])) {
 			exit(1);
 		}
-		
-		if(a.n_cols != b.n_rows){
-			fprintf(stderr, "ERROR: Matrix size mismatch\n");
-			exit(1);
-		}
 	}
 
 	if (print_matrix) {
@@ -182,7 +177,10 @@ int main(int argc, char *argv[])
 
 	matrix_init(&c, a.n_rows, b.n_cols);
 
-	matrix_multiply(&c, &a, &b);
+	if (matrix_multiply(&c, &a, &b) < 0) {
+		fprintf(stderr, "ERROR: Matrix size mismatch\n");
+		exit(1);
+	}
 
 	if (print_matrix) {
 		printf("c is a %d by %d:\n", c.n_rows, c.n_cols);
