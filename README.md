@@ -64,5 +64,6 @@ real    0m0.078s
 user    0m0.072s
 sys     0m0.004s
 ```
+Note that 78 milliseconds is a very small amount of time and very open to "noise" in your measurements. You should make your code run in the order of seconds. You should be able to analyze to complexity and anticipate how slow your algorithm will get as you increase the matrix size. 
 
 Just take a note of real time and create a table for different sizes of square matrices. Plot your results, and create a short(1-2 pages) report, discussing the results. And submit the report(pdf file, please) in the same tarball as your assignment.
